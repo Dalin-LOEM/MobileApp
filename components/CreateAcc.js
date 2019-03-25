@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {View, Text, StyleSheet, TextInput} from 'react-native'
-import {Container, Icon, Button} from 'native-base'
+import {Container, Icon, Button, CheckBox} from 'native-base'
 
 export default class CreateAcc extends Component{
     constructor(props){
@@ -68,6 +68,61 @@ export default class CreateAcc extends Component{
                         }/>
                     </View>  
                 </View>
+                <View>
+                    <View style={styles.mainStyle}>
+                        <TextInput
+                            style={styles.inputtext}
+                            value={this.state.email}
+                            placeholder="E-mail"
+                            onChangeText={
+                            email => this.setState({ email })
+                        }/>
+                    </View>  
+                </View>
+                <View>
+                    <View style={styles.mainStyle}>
+                        <TextInput
+                            style={styles.inputtext}
+                            value={this.state.password}
+                            placeholder="Password"
+                            onChangeText={
+                            password => this.setState({ password })
+                        }/>
+                    </View>  
+                </View>
+                <View>
+                    <View style={styles.mainStyle}>
+                        <TextInput
+                            style={styles.inputtext}
+                            value={this.state.passwordAgain}
+                            placeholder="Password Again"
+                            onChangeText={
+                                passwordAgain => this.setState({ passwordAgain })
+                        }/>
+                    </View>  
+                </View>
+                <View style={styles.mainStyle}>
+                    <View style={{width: '10%', marginTop: '5%'}}>
+                        <CheckBox color="gray"/>
+                    </View>
+                    <View style={{width: '61%', marginTop: '5%'}}>
+                        <Text>Create a registered customer account using my data, I agree with the Privacy Policy and Terms and Conditions</Text>
+                    </View>
+                </View>
+                <View style={styles.mainStyle}>
+                    <Button rounded style={{justifyContent: "center", backgroundColor: "#C99E67", width: "60%", 
+                                            height: 30, marginTop: "5%"}}>
+                        <Text>CREATE ACCOUNT</Text>
+                    </Button>
+                </View>
+                <View style={styles.mainStyle}>
+                    <View>
+                        <Text>Already have an account? </Text> 
+                    </View>
+                    <View>
+                        <Text style={{color: '#C99E67'}}>  Sing in </Text> 
+                    </View>
+                </View>
             </Container>
         )
     }
@@ -84,6 +139,6 @@ const styles = StyleSheet.create ({
         fontSize: 10,
         borderColor: '#9e9e9e',
         borderRadius: 0.4,
-        marginTop: '5%'
+        marginTop: '3%'
     },
 })
