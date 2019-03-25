@@ -4,6 +4,7 @@ import { Actions } from 'react-native-router-flux'
 import { Container, Button, Content, Right, Header, Left, Icon, Body, Title, Text} from 'native-base'
 import WelcomeES from './WelcomeES'
 import CreateAcc from './CreateAcc'
+import Profile from './Profile'
 
 const goToHome = () => {
    Actions.form()
@@ -45,7 +46,10 @@ class About extends Component{
                </View> */}
 
                {/* Page Create Account */}
-               <CreateAcc/>
+               {/* <CreateAcc/> */}
+
+               {/* Page Profile */}
+               <Profile/>
             </Content>
               
         </Container>
